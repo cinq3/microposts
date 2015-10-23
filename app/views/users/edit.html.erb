@@ -1,0 +1,77 @@
+<h1>Profile</h1>
+
+<div class="container-fluid">
+
+<%= form_for @user, html: {class: 'form-horizontal'} do |f| %>
+  <div class=" form-group">
+    <label class="control-label col-xs-2" >名前:</label>
+    <div class="col-xs-10">
+      <%= f.text_field :name %>
+    </div>
+  </div>
+  <div class=" form-group">
+    <label class="control-label col-xs-2" >メール</label>
+    <div class="col-xs-10">
+      <%= f.text_field :email %>
+    </div>
+  </div>
+  <div class=" form-group">
+    <label class="control-label col-xs-4">パスワード</label>
+    <div class="col-xs-5">
+      <%= f.password_field :password %>
+    </div>
+    <div class="col-xs-3">　
+    </div>
+  </div>
+  <div class=" form-group">
+    <label class="control-label col-xs-4">パスワード(確認用）</label>
+    <div class="col-xs-5">
+      <%= f.password_field :password_confirmation %>
+    </div>
+    <div class="col-xs-3">　
+    </div>
+  </div>
+  <div class=" form-group">
+    <label class="control-label col-xs-2">所在地</label>
+    <div class="col-xs-10">
+      <%= f.text_field :location %>
+    </div>
+  </div>
+  <div class=" form-group">
+    <label class="control-label col-xs-2">自己紹介</label>
+    <div class="col-xs-10">
+      <%= f.text_area :description %>
+    </div>
+  </div>
+  <div class=" form-group">
+    <label class="control-label col-xs-2">誕生日</label>
+    <div class="col-xs-3">
+        <%= f.text_field :birthyear %>
+    </div>
+    <div class="col-xs-1">
+        年
+    </div>
+    <div class="col-xs-2">
+        <%= f.text_field :birthmonth %>
+    </div>
+    <div class="col-xs-1">
+        月
+    </div>
+    <div class="col-xs-2">
+        <%= f.text_field :birthday %>
+    </div>
+    <div class="col-xs-1">
+        日
+    </div>
+  </div>
+  <div class=" form-group">
+    <div class="col-xs-offset-2 col-xs-4">
+      <%= f.submit "更新", class: "btn btn-large btn-primary" %>
+    </div>
+    <div class="col-xs-4">
+      <%= link_to "キャンセル", "#" %>
+      
+    </div>
+  </div>
+<% end %>
+</div>

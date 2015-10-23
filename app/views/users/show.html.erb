@@ -2,3 +2,10 @@
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
+
+<div class="panel-body">
+  <h2>MY PROFILE</h2>
+  自己紹介： <%= @user.description %><br />
+  現住所： <%= @user.location %><br />
+  連絡先：: <%= @user.email %><br />
+</div>
