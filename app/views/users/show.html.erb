@@ -10,13 +10,8 @@
   自己紹介： <%= @user.description %><br />
   <div style="line-height:2;">
   現住所： <%= @user.location %><br />
-  誕生日：
-  <% if @user.birthyear != nil %>
-  <%= @user.birthyear %>年
-  <% end %>
-  <% if @user.birthmonth != nil %>
-  <%= @user.birthmonth %>月 <%= @user.birthday %>日
-  <% end %>
+  誕生日： <%= @user.birthdate %>
+ 
   <br />
   連絡先：: <%= @user.email %><br />
   </div>
