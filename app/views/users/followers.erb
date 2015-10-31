@@ -1,0 +1,17 @@
+<h1>Followers</h1>
+
+
+
+  <div class="panel-body">
+    <% @followers.each do |follower| %>
+    <div class=" form-group">
+      
+      <div class="col-sm-offset-5 col-sm-2">
+        <%= link_to gravatar_for(follower, size: 25), follower %>
+        <%= follower.name %>
+      </div>
+
+      <br clear="all" />
+  </div>
+  <% end %>
+</div>
