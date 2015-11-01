@@ -14,6 +14,13 @@
     </div>
   </aside>
   <div class="col-md-8">
+    <%= render 'follow_form' if logged_in? %>
+    <% if @user.microposts.any? %>
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+    <% end %>
     <div class="panel-body">
       <h2 class="txt_left">MY PROFILE</h2>
  
@@ -25,13 +32,7 @@
       <br />
       連絡先：: <%= @user.email %><br />
     </div>
-  </div>
-    <%= render 'follow_form' if logged_in? %>
-    <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
-      <ol class="microposts">
-        <%= render @microposts %>
-      </ol>
-    <% end %>
-
+   </div>
+    
+   </div>
 
